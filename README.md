@@ -2,6 +2,9 @@
 
 A cutting-edge, AI-powered strategic intelligence platform that helps businesses achieve market dominance through precision strategy, flawless execution, and continuous optimization.
 
+## 🌐 Live Demo
+**[https://project-sniper-think.vercel.app/](https://project-sniper-think.vercel.app/)**
+
 ## 🚀 Features
 
 ### Core Functionality
@@ -45,32 +48,41 @@ A cutting-edge, AI-powered strategic intelligence platform that helps businesses
 ## 📁 Project Structure
 
 ```
-frontend/
-├── src/
-│   ├── components/
-│   │   ├── StrategyStep.jsx      # Main strategy step components
-│   │   ├── Testimonials.jsx     # Customer testimonials section
-│   │   ├── Spotlight.jsx        # Mouse-following spotlight effect
-│   │   ├── DarkModeToggle.jsx  # Theme switcher
-│   │   ├── StatsCounter.jsx     # Animated statistics
-│   │   ├── LoadingScreen.jsx   # Initial loading animation
-│   │   ├── TechMarquee.jsx     # Technology showcase
-│   │   ├── MouseParallax.jsx    # Parallax mouse effects
-│   │   └── ScrollProgress.jsx  # Progress indicator
-│   ├── data/
-│   │   └── strategySteps.js    # Strategy steps configuration
-│   ├── hooks/
-│   │   ├── useInView.js        # Intersection observer hook
-│   │   └── useScrollProgress.js # Scroll progress hook
-│   ├── App.jsx                # Main application component
-│   ├── index.jsx              # Application entry point
-│   ├── App.css               # Global styles
-│   └── index.css             # Base styles
-├── public/
-├── package.json
-├── vite.config.js
-├── tailwind.config.js
-└── postcss.config.js
+sniperthink/
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── StrategyStep.jsx      # Main strategy step components
+│   │   │   ├── Testimonials.jsx     # Customer testimonials section
+│   │   │   ├── Spotlight.jsx        # Mouse-following spotlight effect
+│   │   │   ├── DarkModeToggle.jsx  # Theme switcher
+│   │   │   ├── StatsCounter.jsx     # Animated statistics
+│   │   │   ├── LoadingScreen.jsx   # Initial loading animation
+│   │   │   ├── TechMarquee.jsx     # Technology showcase
+│   │   │   ├── MouseParallax.jsx    # Parallax mouse effects
+│   │   │   └── ScrollProgress.jsx  # Progress indicator
+│   │   ├── data/
+│   │   │   └── strategySteps.js    # Strategy steps configuration
+│   │   ├── hooks/
+│   │   │   ├── useInView.js        # Intersection observer hook
+│   │   │   └── useScrollProgress.js # Scroll progress hook
+│   │   ├── App.jsx                # Main application component
+│   │   ├── index.jsx              # Application entry point
+│   │   ├── App.css               # Global styles
+│   │   └── index.css             # Base styles
+│   ├── public/
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── tailwind.config.js
+│   └── postcss.config.js
+├── backend/
+│   ├── server.js                 # Express server and API routes
+│   ├── package.json
+│   └── .env.example              # Environment variables template
+├── package.json                  # Root package.json with scripts
+├── vercel.json                   # Vercel deployment configuration
+├── .gitignore
+└── README.md
 ```
 
 ## 🎨 Design System
