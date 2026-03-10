@@ -115,8 +115,8 @@ sniperthink/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd project-2/frontend
+   git clone https://github.com/Varun2045/SniperThink
+   cd SniperThink/frontend
    ```
 
 2. **Install dependencies**
