@@ -194,7 +194,34 @@ const StrategyStep = ({ step, index }) => {
             onClick={() => {
               const element = document.getElementById('start-journey');
               if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+                element.scrollIntoView({ 
+                  behavior: 'smooth',
+                  block: 'start',
+                  inline: 'nearest'
+                });
+                
+                // Slow down the scrolling animation
+                const start = window.pageYOffset;
+                const target = element.getBoundingClientRect().top + start - 100;
+                const distance = target - start;
+                const duration = 3000; // 3 seconds for slower scroll
+                let startTimestamp = null;
+
+                const step = (timestamp) => {
+                  if (!startTimestamp) startTimestamp = timestamp;
+                  const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                  const easeInOutCubic = progress < 0.5
+                    ? 4 * progress * progress * progress
+                    : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+                  
+                  window.scrollTo(0, start + distance * easeInOutCubic);
+                  
+                  if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                  }
+                };
+
+                window.requestAnimationFrame(step);
               }
             }}
             className={`group relative mt-8 px-8 py-4 rounded-full bg-gradient-to-r ${step.color} text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden`}
